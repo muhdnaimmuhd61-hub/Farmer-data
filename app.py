@@ -35,7 +35,7 @@ def init_db():
     # Populate LGAs if empty
     c.execute("SELECT COUNT(*) FROM lga_coords")
     if c.fetchone()[0] == 0:
-    print("Babu sakamakon da aka samu")
+        print("Babu sakamakon da aka samu")
 # Multi-language
 lang_dict = {
     "en": {"welcome":"Smart Farmers Data Portal","name":"Full Name","phone":"Phone Number","state":"State","lga":"LGA",
