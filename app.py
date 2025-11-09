@@ -73,7 +73,6 @@ def init_db():
     {"state":"Yobe","lgas":["Bade","Bursari","Damaturu","Fika","Fune","Geidam","Gujba","Gulani","Jakusko","Karasuwa","Machina","Nangere","Nguru","Potiskum","Tarmuwa","Yunusari","Yusufari"]},
     {"state":"Zamfara","lgas":["Anka","Bakura","Birnin Magaji/Kiyaw","Bukkuyum","Bungudu","Gummi","Gusau","Kaura Namoda","Maradun","Maru","Shinkafi","Talata Mafara","Chafe","Zurmi"]}
 ]
-        }
         for state, lgas in all_locations.items():
             for lga in lgas:
                 c.execute("INSERT INTO lga_coords(state,lga) VALUES (?,?)",(state,lga))
