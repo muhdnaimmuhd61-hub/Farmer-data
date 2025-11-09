@@ -1,4 +1,5 @@
-from flask import Flask, render_template_string, request, send_file import sqlite3, os, csv, random from werkzeug.utils import secure_filename
+from flask import Flask, render_template_string, request, send_file
+import sqlite3, os, csv, random from werkzeug.utils import secure_filename
 
 app = Flask(name) app.config['UPLOAD_FOLDER'] = 'static/photos' os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
