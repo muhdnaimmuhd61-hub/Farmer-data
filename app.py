@@ -1,8 +1,14 @@
-from flask import Flask, render_template_string, request, send_file
-import sqlite3, os, csv, random
-from werkzeug.utils import secure_filename
+from flask import Flask, render_template_string
 
 app = Flask(__name__)
+
+@app.route('/')
+def home():
+    # gwajin ko server yana aiki
+    return render_template_string("<h1>Server is live and running ✅</h1>")
+
+if __name__ == '__main__':
+    app.run(debug=True)
 UPLOAD_FOLDER = 'static/photos'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
